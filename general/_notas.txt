@@ -1,0 +1,5 @@
+Tamaño de imagenes en Trabajos Realizados:
+
+Ancho 250 -Altura 200 o de 500 x 400 = 17,64 x 14,11 cm
+
+por codigo el ancho es 200 y la altura automática

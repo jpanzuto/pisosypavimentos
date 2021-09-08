@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+*{
+    margin: 0;
+    padding: 0;
+	}
+
+html{
+	font-size: 62.5%;
+	}
+
+header, section, footer, aside, nav, article, figure {
+	display: block;
+	}
+
+body {
+	font-family:'Open Sans', Arial, sans-serif;
+	background: rgb(26,26,33);
+	background: linear-gradient(180deg, rgba(26,26,33,1) 0%, rgba(42,42,60,1) 40%, rgba(128,132,133,1) 100%);
+	color: #000;
+	text-align: left;
+	font-size: 1.6rem;
+	}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: #0A122A;
+	margin: 1rem;  /* aplica a los 4: top, right, bottom y left  */
+	padding-left: 2rem;
+	padding-right: 2rem;
+	}
+
+nav ul, nav ul a, nav ul a:visited {
+	display: block; 
+	text-decoration: none;
+	list-style: none; /*  elimina el marcador de lista */
+	margin-bottom: 2rem; /* crea el espacio entre la navegación en el contenido situado debajo */
+	text-align: center;	
+	}
+
+nav ul a:hover, nav ul a:active, nav ul a:focus {
+	color: #4C616D;
+	text-decoration: none;
+	}
+
+mark {/* Resalta parte de un texto */
+		background-color:#fff;
+		}
+
+header {
+	margin-top: 0.2rem;
+	height: 7.5rem;
+	padding: 0.8rem;
+	position: relative; 
+	background-image: url(../img-general/encabezado.png); 
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+.PyP{
+	font-size: 2.5rem;
+	font-style: italic;
+	text-align: right;
+	transform: translateX();
+	animation-name: intro;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	}
+
+@keyframes intro{
+	0% { transform: scale(1);}
+	50% { transform: scale(1.05);}
+	100% {transform: scale(1);}
+}
+
+.menu-n1{
+	display: inline-block;
+	margin-right: 1.2rem;
+	text-align: center;
+	position: relative;
+	}
+.menu-n1:hover .submenu{
+	display: block;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	background-color: rgba(136, 136, 136, 0.86);
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	border: 1.2px solid  #555;
+	border-top: 0;
+	width: 160%;
+	top: 3rem;
+}
+.submenu a {
+	margin-bottom:1rem;
+}
+
+section{
+	padding: 0.4rem;
+	line-height: 1.7;
+	}
+
+article {
+	background: #ffffff;
+	background-size: auto;
+	-moz-box-shadow: 0 0 3px 3px #888;
+	-webkit-box-shadow: 0 0 3px 3px #888;
+	box-shadow: 0 0 3px 3px #888;
+	}
+	
+footer {
+	border-top: 3px solid #999990;
+	padding: 0.5rem;
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#454545), color-stop(50%,#ACACAC ), color-stop(100%,#8A8A8A));
+	position: relative;
+	clear: both; 
+	text-align: center;
+	font-size: 1.8rem;
+	}
+
+article img{
+	transition: all 0.7s ease-out 0.2s;
+	border-radius: 1.5rem;
+	border: 0.1rem solid #999990;
+	width: 30rem;
+}
+
+article img:hover{
+	border: 1px solid #0e256b;
+	transform:scale(1.1);
+}
+
+a img { /* elimina el borde azul alrededor de una imagen cuando tiene un vínculo */
+	border: none;
+	border-color:#425364;
+	}
+
+figcaption {
+	font-size:90%;
+	text-align: center;
+	}
+
+	
+input[type=text], input[type=extarea], input[type=submit] {
+	width: 70%;
+	padding: 0.5em;
+	font-size: 1em;
+	margin-bottom: 1.3em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	}
+
+div.cform-response-output {
+	text-align: center;
+	margin-left: 40% !important;
+	margin-top: 0.5em !important;
+	padding: 0.5em !important;
+	border-radius: 0.4rem;
+	-moz-border-radius: 0.4rem;
+	-webkit-border-radius: 0.4rem;
+	}
+
+.galeria{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 0.5rem;
+	justify-items: center;
+	text-align: center;
+	overflow: hidden;
+	}
+
+.whatsapp
+	{
+	position:fixed;
+	width: 5rem;
+	bottom:3rem;
+	right: 9rem;
+	animation-name: WP;
+	animation-duration: 1s;
+	animation-delay: 4s;
+	animation-iteration-count: 3;
+	animation-timing-function: ease-in-out;
+	}
+
+@keyframes WP{
+	0% { transform: scale(1);}
+	40% { transform: scale(1);}
+	60% { transform: scale(1.1);}
+	100% {transform: scale(1);}
+	}
+/* ~~ Este contenedor de anchura fija rodea a todas las demás bloques ~~ */
+.container {
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	background: -webkit-linear-gradient(top, #C1C2C6 20%,#C0C0C0 100%); /* Chrome10+,Safari5.1+ */ 
+	-moz-box-shadow: rgb(180,185,200) -2px 2px 1px ; 
+	box-shadow: rgb(180,185,200) -2px 2px 1px ; 
+	}
+
+/* No se asigna una anchura al encabezado ya que se extenderá por toda la anchura del diseño. */
+
+.tabla {
+	padding: 1.2rem;
+	border:0.2rem solid #ccc;
+	background-color:#eee;
+	text-align: left;
+	}
+	
+.tabla p {
+	clear: both;
+	color: #666;
+	}
+
+.tabla .titulo {
+	background-color: #ddd;
+	border-right: 1px solid #ccc;
+	font-weight: bold;
+	}
+
+.tabla .columna {
+	float:left;
+	width:47%;
+	text-align: center;
+	}
+
+.content {
+	padding: 0.5rem;
+	width: 80%;
+	float: left;
+	}
+	
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+
+.content ul, .content ol {
+	padding: 0 1.5rem 1.5rem 4rem; 
+	/* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. */
+	}
+
+.contactForm textarea {
+	height: 10rem;
+	width: 70%;
+	border: 1;
+	font-size: 1em;
+	margin-bottom: 1.3em;
+	text-align: left;
+	vertical-align: left;
+	}
+
+#derecha {
+	display: grid;
+	width: 13rem;
+	padding: 0.5rem;
+	font-size: 1.1rem;
+	text-align: center;
+	}
+
+#derecha img{
+	width: 10rem;
+	border-radius: 1rem;
+	}
+#derecha p{
+	padding: 0.3rem;
+	margin: 0.1rem;
+}
+
+
+
+/* Los estilos de vínculos deben permanecer en este orden: link / visited / hover */
+a:link, a:visited {
+	color: #FFFFF0;
+	text-shadow: rgb(0,0,150) 1px 1px 1px;
+	text-decoration: none;
+	}
+	
+a:hover, a:active, a:focus { 
+	color: #666;
+	text-shadow: rgb(0,0,50) 0px 1px 1px;
+	text-decoration: none;
+	}
+
+.servicios{
+	display:flex;
+	padding: 1.5rem;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	text-align: center;
+	color:#666;
+	}
+.servicios a{
+	text-decoration: none;
+	text-shadow: none;
+	color: #0e256b;
+}
+
+#mapasitio{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+	
+#mapa a:link{
+	text-decoration: none;
+	text-shadow: none;
+	color: #000023;
+	} 
+	
+#mapa a:hover,#mapa a:active{ 
+	color: #000030;  
+	text-shadow: rgb(0,0,50) 0px 0px 1px;
+	} 
+	
+#mapa a:visited{ 
+	text-decoration: none;
+	color: #000030;
+	text-shadow: rgb(0,0,50) 0px 0px 1px;
+	} 
+
+#contacto, address {
+	color: #FFF;
+	text-shadow: rgb(0,0,150) 1px 1px 1px;
+	font-size: 1.4rem;
+	font-style: normal;
+	}
+
+#contact-form {
+	position: relative;
+	z-index: 999;
+	}
+
+#contact-form input[type=text], .contactForm input[type=textarea] {
+	border: 0;
+	text-align: left;
+	vertical-align: center;
+	}
+
+#contact-form input[type=text]:focus, .contactForm textarea:focus {
+	color: #555;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	transition: background 0.25 ease-in;
+	-moz-transition: background 0.25 ease-in;
+	-webkit-transition: background 0.25 ease-in;
+	}
+
+#contact-form input[type=text] {
+	margin-bottom:30px;
+	}
+
+#contact-form input[type=submit] {
+	color: #fff;
+	height: 60px;
+	text-shadow: none;
+	font-size: 1em;
+	padding:0.5em;
+	letter-spacing: 0.05em;
+	margin: 0 0 20px 0;
+	border: 0;
+	text-transform: none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	}
+
+#contact-form input[type=submit]:hover, #contact-form input[type=submit]:active {
+	background: #43413e !important;
+	}
+
+#contact-form textarea {
+	padding-top: 1em;
+	}
+.imgprincipal {
+		width: 100%;
+		align-content: center;
+	   }
+
+
+@media (max-width: 768px) {
+
+	.container {
+		width: 90%;
+	}
+	.content {
+			width: 95%;
+		}
+	.galeria{
+		grid-template-columns: 1fr;
+	}
+	.whatsapp
+	{
+		width: 5rem;
+		bottom: 2rem;
+		right: 5rem;
+	}
+	#derecha {
+		display: none;
+	}
+}
