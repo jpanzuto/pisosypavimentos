@@ -110,7 +110,7 @@ header {
   position: relative;
 }
 
-.menu-n1:hover {
+.menu-n1 a:hover {
   display: block;
 }
 
@@ -266,13 +266,11 @@ div.cform-response-output {
   }
 }
 
-/* ~~ Este contenedor de anchura fija rodea a todas las demás bloques ~~ */
 .container {
   width: 70%;
   margin-right: auto;
   margin-left: auto;
   background: -webkit-linear-gradient(top, #C1C2C6 20%, #C0C0C0 100%);
-  /* Chrome10+,Safari5.1+ */
   -webkit-box-shadow: #b4b9c8 -2px 2px 1px;
           box-shadow: #b4b9c8 -2px 2px 1px;
 }
@@ -341,7 +339,6 @@ div.cform-response-output {
   margin: 0.1rem;
 }
 
-/* Los estilos de vínculos deben permanecer en este orden: link / visited / hover */
 a:link, a:visited {
   color: #FFFFF0;
   text-shadow: #000096 1px 1px 1px;
@@ -399,12 +396,12 @@ a:hover, a:active, a:focus {
   color: #000023;
 }
 
-#mapa a:link a:hover, #mapa a:link a:active {
+#mapa a:hover, #mapa a:active {
   color: #000030;
   text-shadow: #000032 0px 0px 1px;
 }
 
-#mapa a:link a:visited {
+#mapa a:visited {
   text-decoration: none;
   color: #000030;
   text-shadow: #000032 0px 0px 1px;
@@ -475,8 +472,12 @@ a:hover, a:active, a:focus {
 }
 
 @media (max-width: 768px) {
+  header {
+    display: contents;
+  }
   .container {
     width: 90%;
+    background: -webkit-linear-gradient(top, #3d455f 20%, #a4a1bb 100%);
   }
   .content {
     width: 95%;
